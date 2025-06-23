@@ -19,6 +19,5 @@ class IndexedRectangle(BaseModel):
     z_index: int
 
     def contains(self, x: int, y: int) -> bool:
-        """Checks if a point (x, y) is inside this rectangle's bounds."""
         rectangle = self.rectangle
         return rectangle.left <= x < rectangle.right and rectangle.bottom <= y < rectangle.top
